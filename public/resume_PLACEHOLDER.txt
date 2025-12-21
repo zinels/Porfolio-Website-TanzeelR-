@@ -1,0 +1,9 @@
+RESUME PLACEHOLDER
+==================
+
+This is a placeholder file. Replace public/resume.pdf with your actual resume PDF.
+
+The resume should be named: resume.pdf
+
+Simply delete this file and add your resume.pdf to the public/ directory.
+
