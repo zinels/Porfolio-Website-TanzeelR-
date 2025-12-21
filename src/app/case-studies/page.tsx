@@ -18,7 +18,7 @@ export default function CaseStudiesPage() {
             Case Studies
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Deep dives into the problems I've solved, the constraints I worked within, 
+            Deep dives into the problems I&apos;ve solved, the constraints I worked within, 
             and the engineering decisions that shaped each project.
           </p>
         </div>

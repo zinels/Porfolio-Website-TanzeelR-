@@ -77,7 +77,7 @@ export default function Footer() {
               Quote
             </h3>
             <blockquote className="text-sm text-muted-foreground italic mb-2">
-              "{quote.text}"
+              &ldquo;{quote.text}&rdquo;
             </blockquote>
             <p className="text-xs text-muted-foreground/70">— {quote.author}</p>
           </div>

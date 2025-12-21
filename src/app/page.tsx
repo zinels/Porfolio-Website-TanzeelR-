@@ -98,7 +98,7 @@ export default function Home() {
       title: "Student Coordinator",
       organization: "Bangladesh Student Association (BSA), USF",
       period: "June 2024 - Present",
-      description: "Acted as the primary point of contact for inquiries, providing guidance and a welcoming environment for students and families. Led 15 volunteers in organizing \"Shondhar Adda,\" the inaugural fall event. Oversaw 21 dance performances and collaborated with e-board partners to make \"Mock Gaye Holud\" a successful cultural event for over 350 audience members.",
+      description: "Acted as the primary point of contact for inquiries, providing guidance and a welcoming environment for students and families. Led 15 volunteers in organizing &ldquo;Shondhar Adda,&rdquo; the inaugural fall event. Oversaw 21 dance performances and collaborated with e-board partners to make &ldquo;Mock Gaye Holud&rdquo; a successful cultural event for over 350 audience members.",
       tags: ["Event Management", "Student Leadership", "Cultural Events", "Volunteer Coordination"]
     },
     {
@@ -173,7 +173,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <Quote className="w-8 h-8 text-accent mx-auto mb-4 opacity-50" />
           <blockquote className="text-2xl md:text-3xl font-medium text-foreground mb-4 italic">
-            "{quote.text}"
+            &ldquo;{quote.text}&rdquo;
           </blockquote>
           <p className="text-muted-foreground">— {quote.author}</p>
         </div>
@@ -191,7 +191,7 @@ export default function Home() {
             Featured Solutions
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Real software systems I've built. Each project solves a specific problem with thoughtful engineering.
+            Real software systems I&apos;ve built. Each project solves a specific problem with thoughtful engineering.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -365,12 +365,12 @@ export default function Home() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p className="text-lg">
-                I'm a Software Engineer Intern focused on building production-grade backend systems and full-stack applications. 
+                I&apos;m a Software Engineer Intern focused on building production-grade backend systems and full-stack applications. 
                 I ship real software that solves real problems—from ML pipelines at Moffitt Cancer Center to mobile research applications at USF.
               </p>
               <p>
                 My expertise spans backend development, API design, mobile applications, and data processing systems. 
-                I'm passionate about writing clean, maintainable code and building systems that scale.
+                I&apos;m passionate about writing clean, maintainable code and building systems that scale.
               </p>
               <p>
                 Beyond code, I lead student organizations, manage volunteer teams, and contribute to community initiatives—balancing technical excellence with leadership impact.
@@ -387,10 +387,10 @@ export default function Home() {
       <Section id="contact" className="bg-muted/20">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="text-muted-foreground mb-8">
-            I'm always open to discussing new opportunities, interesting projects, or just having a conversation about software engineering.
+            I&apos;m always open to discussing new opportunities, interesting projects, or just having a conversation about software engineering.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
