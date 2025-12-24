@@ -121,7 +121,7 @@ export default function Home() {
       <Section id="hero" className="pt-32 pb-16">
         <div className="text-center">
           <div className="inline-block mb-6 px-4 py-2 rounded-full border border-border bg-muted/30 backdrop-blur-sm">
-            <span className="text-sm text-muted-foreground">Software Engineer Intern</span>
+            <span className="text-sm text-muted-foreground">Tanzeel Rahman</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 text-balance">
             Building Real
