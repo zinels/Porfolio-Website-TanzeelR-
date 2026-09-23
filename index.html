@@ -11,19 +11,19 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f1ead9;
-    --bg-raised:#e9e0c9;
-    --panel:#f7f2e4;
+    --bg:#f4f5ef;
+    --bg-raised:#e9ede4;
+    --panel:#fafbf7;
     --line:rgba(36,33,27,0.15);
     --line-soft:rgba(36,33,27,0.07);
     --ink:#24211b;
     --ink-muted:#6e6656;
-    --ink-dim:#978e77;
+    --ink-dim:#687363;
     --rust:#2f4a3c;
     --rust-soft:rgba(47,74,60,0.10);
-    --sage:#a9803f;
+    --sage:#536d46;
     --sage-soft:rgba(169,128,63,0.12);
-    --maxw:1080px;
+    --maxw:1180px;
     --f-display:'EB Garamond',serif;
     --f-body:'IBM Plex Sans',sans-serif;
     --f-mono:'IBM Plex Mono',monospace;
@@ -216,7 +216,7 @@
   .footer-col h5{font-family:var(--f-mono); font-size:11px; color:var(--ink-dim); text-transform:uppercase; letter-spacing:0.07em; margin:0 0 12px; font-weight:500;}
   .footer-col a{display:block; color:var(--ink-muted); text-decoration:none; font-size:14px; margin-bottom:8px;}
   .footer-col a:hover{color:var(--rust);}
-  .footer-quote{color:var(--ink-dim); font-size:13px; font-family:var(--f-display); max-width:280px;}
+  .footer-quote{color:var(--ink-dim); font-family:var(--f-display); max-width:none; white-space:nowrap; font-size:clamp(9px,2.5vw,13px);}
   .footer-quote b{display:block; margin-top:6px; font-family:var(--f-mono); font-size:11px; color:var(--ink-dim); font-weight:400; text-transform:none;}
   .footer-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; color:var(--ink-dim); font-size:12px; font-family:var(--f-mono); padding-top:20px; border-top:1px solid var(--line-soft);}
 
@@ -227,26 +227,31 @@
   .back-to-top.show{opacity:1; pointer-events:auto;}
   .back-to-top:hover{border-color:var(--rust); color:var(--rust);}
 </style>
+<link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="ambient" aria-hidden="true"><div class="ambient-orbit orbit-one"></div><div class="ambient-orbit orbit-two"></div></div>
+<div class="reading-progress" aria-hidden="true"></div>
 
 <header class="nav">
   <div class="nav-inner">
-    <a class="nav-brand" href="#top"><span class="monogram">TR</span>Tanzeel Rahman</a>
+    <a class="nav-brand" href="#top"><span class="monogram">tr<span>.</span></span><span class="brand-name">tanzeel<span class="brand-path"> / portfolio</span></span></a>
     <nav class="links" id="deskNav">
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#leadership">Leadership</a>
+      <a href="#publications">Research</a>
+      <a href="#education">About</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="./resume.pdf" target="_blank" rel="noopener">Industry Resume</a>
-    <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">≡</button>
+    <button class="burger" id="burgerBtn" aria-controls="mobileMenu" aria-label="Toggle menu" aria-expanded="false">≡</button>
   </div>
   <div id="mobileMenu">
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#publications">Research</a>
     <a href="#education">Education</a>
     <a href="#leadership">Leadership</a>
     <a href="#skills">Skills</a>
@@ -255,34 +260,50 @@
   </div>
 </header>
 
-<main>
-  <!-- ================= HERO ================= -->
+<main id="main">
   <section class="hero" id="top">
     <div class="wrap">
-      <div class="chapter-rule"></div>
-      <div class="eyebrow">CS junior, USF · Tampa, FL</div>
-      <h1>I build systems that hold up under <span class="accent">real use.</span></h1>
-      <p class="lead">Studying backend engineering, data pipelines, and applied AI. Right now that means shipping
-      software across fintech, cancer genomics research, and behavioral science labs. I like the parts of
-      engineering nobody screenshots: schemas, retries, and code that's still running at 3am.</p>
-      <div class="focus-line">Backend Development · Data Pipelines · AI Workflow Orchestration · System Design · Mobile</div>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="./resume.pdf" target="_blank" rel="noopener">Industry Resume</a>
-        <a class="btn btn-ghost" href="https://github.com/zinels" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/tanzinels/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn-ghost" href="mailto:tanz.riyan@gmail.com">Email</a>
+      <div class="hero-topline"><span><span class="status-dot"></span> BUILDING AT THE INTERSECTION OF CODE &amp; CURIOSITY</span><span>TAMPA, FL / USF</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Hey, I'm Tanzeel Rahman.</div>
+          <h1>Serious about systems.<br><span class="accent">Curious about<br>everything.</span></h1>
+          <p class="lead">Computer science student. Software engineer. Researcher.<br>I build the systems behind the experience, from fintech tools and genomic data pipelines to software that studies how people interact.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore my work <span>↗</span></a><a class="btn btn-ghost" href="./resume.pdf" target="_blank" rel="noopener">Resume ↓</a></div>
+          <div class="hero-socials"><a href="https://github.com/zinels" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/tanzinels/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:tanz.riyan@gmail.com">Say hello ↗</a></div>
+        </div>
+        <div class="workspace-scene">
+          <div class="scene-heading"><span>~/tanzeel/workspace</span><span class="scene-dots">● ● ●</span></div>
+          <div class="scene-art">
+            <div class="scene-grid" aria-hidden="true"></div><div class="code-note note-one" aria-hidden="true">{ curiosity: true }</div><div class="code-note note-two" aria-hidden="true">build. test. learn.</div>
+            <svg class="developer-art" viewBox="0 0 360 280" role="img" aria-label="Pixel illustration of a developer at a desk, with a plant, coffee, and code on a monitor" shape-rendering="crispEdges">
+              <ellipse cx="185" cy="246" rx="143" ry="13" fill="#263f2b" opacity=".09"/>
+              <path d="M73 168h229v13H73zM84 181h9v61h-9zM281 181h9v61h-9z" fill="#647352"/>
+              <path d="M78 181h222v5H78z" fill="#374c36"/>
+              <g class="monitor"><path d="M192 83h99v77h-99z" fill="#263a32"/><path d="M199 90h85v60h-85z" fill="#d9e6c8"/><path d="M235 160h12v8h-12zM222 166h38v3h-38z" fill="#263a32"/><g class="screen-code" fill="#64864d"><path d="M208 102h23v3h-23zM208 112h8v3h-8zM222 112h40v3h-40zM217 122h31v3h-31zM252 122h18v3h-18zM208 132h15v3h-15z"/><path class="cursor" d="M228 132h6v4h-6z"/></g></g>
+              <path d="M106 157h42v47h-42zM110 200h35v9h-35zM124 205h8v30h-8zM104 235h49v6h-49z" fill="#a2ad8f"/>
+              <g class="little-me"><path d="M117 80h37v8h9v36h-10v9h-33v-9h-10V92h7z" fill="#b9825d"/><path d="M112 78h11v-7h31v8h10v23h-9V90h-28v12h-15z" fill="#30322b"/><path d="M148 103h5v5h-5zM130 103h5v5h-5z" fill="#26332b"/><path d="M134 119h13v3h-13z" fill="#774e38"/>
+              <path d="M119 132h35v10h9v42h-53v-42h9z" fill="#567654"/><path d="M128 132h18v8h-18z" fill="#b9825d"/><path d="M119 184h40v31h-10v19h-15v-32h-7v29h-15v-35h7z" fill="#344438"/><path d="M132 231h23v10h-23zM108 229h22v10h-22z" fill="#e6e5d7"/>
+              <g class="typing-arm"><path d="M154 144h10v15h24v9h-34z" fill="#b9825d"/><path d="M150 140h15v16h-15z" fill="#567654"/></g></g>
+              <path d="M172 167h48v3h-48z" fill="#344438"/>
+              <path d="M265 152h15v15h-15zM280 155h6v8h-6v-3h3v-2h-3z" fill="#b78253"/><g class="coffee-steam" fill="#859677"><path d="M269 134h3v10h-3zM275 129h3v12h-3z"/></g>
+              <path d="M47 203h30l-4 34H52z" fill="#a88865"/><path d="M60 166h4v39h-4zM48 174h12v8H48zM41 167h13v10H41zM64 157h13v12H64zM70 150h13v12H70zM63 189h13v8H63zM74 181h12v11H74z" fill="#668754"/>
+              <path d="M314 105h4v13h-4zM309 110h14v4h-14zM73 107h3v9h-3zM70 110h9v3h-9z" fill="#93a97c"/>
+            </svg>
+            <button class="hello-button" id="helloBtn" type="button" aria-label="Say hello to little Tanzeel">Say hello <span aria-hidden="true">✳</span></button>
+          </div>
+          <div class="scene-terminal"><span class="terminal-prompt">❯</span> <span id="terminalMessage" aria-live="polite">turning curiosity into working software</span><span class="terminal-cursor" aria-hidden="true">▌</span></div>
+          <div class="scene-footer"><span><span class="status-dot"></span> always learning</span><button id="motionToggle" type="button" aria-pressed="false">Pause motion Ⅱ</button></div>
+        </div>
       </div>
-      <div class="pullquote">
-        <p>"Code is like humor. When you have to explain it, it's bad."</p>
-        <span>Cory House</span>
-      </div>
+      <div class="hero-bottom"><span>BACKEND SYSTEMS <i>/</i> APPLIED AI <i>/</i> HUMAN-CENTERED RESEARCH</span><a href="#now">A look inside my workspace ↓</a></div>
     </div>
   </section>
-
+  <section class="now-section" id="now"><div class="wrap now-layout"><div><div class="eyebrow">01 / On my desk</div><h2>Currently exploring<span class="accent">.</span></h2><p>Questions I'm turning into code.</p></div><div class="now-items"><a href="#project-incollege"><span class="now-number">01</span><span><strong>A networking app, in COBOL.</strong><small>Persistent profiles, people search &amp; regression testing</small></span><span>↗</span></a><a href="#project-social"><span class="now-number">02</span><span><strong>How synthetic-like writing shapes conversation.</strong><small>Reproducible data pipelines &amp; computational social science</small></span><span>↗</span></a><a href="#project-ar"><span class="now-number">03</span><span><strong>Making interaction a research question.</strong><small>Unity, hand tracking &amp; augmented reality</small></span><span>↗</span></a></div></div></section>
   <!-- ================= PIPELINE SIGNATURE ================= -->
   <section class="pipeline">
     <div class="wrap">
-      <div class="pipeline-label">Five roles, in order run</div>
+      <div class="pipeline-label">A path through industry &amp; research</div>
       <div class="pipeline-track reveal" id="pipeTrack">
         <div class="pipe-line-h"></div>
         <div class="pipe-line-v"></div>
@@ -319,7 +340,7 @@
   <section id="experience">
     <div class="wrap">
       <div class="chapter-rule"></div>
-      <div class="eyebrow">Where I've worked</div>
+      <div class="eyebrow">02 / The experience</div>
       <h2 class="section-title">Experience</h2>
       <p class="section-sub">Five roles across industry and research: fintech dashboards, genomic data pipelines,
       Android field research, and backend systems. All shipped and in use.</p>
@@ -436,12 +457,17 @@
   <section id="projects">
     <div class="wrap">
       <div class="chapter-rule"></div>
-      <div class="eyebrow">Selected work</div>
-      <h2 class="section-title">Projects</h2>
+      <div class="eyebrow">03 / Selected work</div>
+      <h2 class="section-title">Things I've built<span class="accent">.</span></h2>
       <p class="section-sub">Systems built end to end, from orchestration engines and research platforms to
       field-tested mobile apps.</p>
 
-      <div class="proj-row reveal">
+      <div class="project-toolbar"><div class="project-filters" role="group" aria-label="Filter projects"><button class="selected" data-filter="all" aria-pressed="true">All work</button><button data-filter="systems" aria-pressed="false">Systems &amp; AI</button><button data-filter="research" aria-pressed="false">Research &amp; data</button><button data-filter="mobile" aria-pressed="false">Mobile &amp; XR</button></div><span id="projectCount" aria-live="polite"></span></div>
+<article class="proj-row reveal" id="project-incollege" data-category="systems"><div><div class="project-kicker">01 / SOFTWARE ENGINEERING</div><h3>InCollege: networking in COBOL</h3><div class="proj-stack">GnuCOBOL · Python · GitHub Actions</div></div><div><p>A team-built, LinkedIn-inspired console application with persistent accounts, profiles, and exact-name search. My contributions include login and navigation, profile persistence tests, and a 23-scenario search regression suite that caught a fixed-width input truncation defect.</p><a class="proj-link" href="https://github.com/zinels/linkedin-clone-from-scratch" target="_blank" rel="noopener">Explore the repository ↗</a></div></article>
+<article class="proj-row reveal" id="project-social" data-category="research"><div><div class="project-kicker">02 / COMPUTATIONAL SOCIAL SCIENCE</div><h3>Synthetic content & human interaction</h3><div class="proj-stack">Python · Pandas · Scikit-learn · Sentence embeddings</div></div><div><p>A team research project examining associations between synthetic-like writing and reply interaction across Reddit communities. The public study analyzes 7,606 comments across 48 subreddit-weeks; my ongoing work explores reproducible thread-sampling pipelines. Synthetic-likeness is a writing-style estimate, not proof of AI authorship.</p><a class="proj-link" href="https://github.com/zinels/synthetic-content-human-interaction" target="_blank" rel="noopener">Read the study & code ↗</a></div></article>
+<article class="proj-row reveal" id="project-ar" data-category="research mobile"><div><div class="project-kicker">03 / ONGOING RESEARCH</div><h3>PizzaProject: interaction in AR</h3><div class="proj-stack">Unity · C# · OpenXR · Ultraleap · Magic Leap</div></div><div><p>Research work with a Unity pizza-making environment for studying hand and controller interaction. Exploring phase-based task flows, physical manipulation, calibration, and event logging to understand how interaction design affects research measurements.</p><span class="project-status">Research in progress</span></div></article>
+<article class="proj-row reveal" id="project-genomics" data-category="research systems"><div><div class="project-kicker">04 / RESEARCH TOOLING</div><h3>Turning genomic reports into structured data</h3><div class="proj-stack">Python · Pandas · PyMuPDF · Excel</div></div><div><p>Parsers for Moffitt STAR and Guardant360 reports that extract structured genomic fields into analysis-ready workbooks. Includes source-file auditing and OCR verification flags to make heterogeneous report data easier to validate.</p><a class="proj-link" href="https://github.com/zinels/moffitt-guardant-parsers" target="_blank" rel="noopener">Explore the parsers ↗</a></div></article>
+      <div class="proj-row reveal" data-category="systems">
         <div>
           <h3>AI Workflow Orchestration and Incident Intelligence Platform</h3>
           <div class="proj-stack">Python · FastAPI · PostgreSQL · pgvector · React · Docker</div>
@@ -452,11 +478,11 @@
           concurrent workers with persistent state, failure isolation, and per-node retries. Includes an AI
           incident-analysis system that retrieves similar incidents and runbooks through pgvector to produce
           evidence-backed root-cause hypotheses and remediation recommendations.</p>
-          <a class="proj-link" href="https://github.com/zinels" target="_blank" rel="noopener">View on GitHub</a>
+          <span class="project-status">Project overview</span>
         </div>
       </div>
 
-      <div class="proj-row reveal">
+      <div class="proj-row reveal" data-category="research mobile">
         <div>
           <h3>MUSER, Music Therapy Research Platform</h3>
           <div class="proj-stack">Kotlin · Jetpack Compose · Firebase · Firestore · Media3 · MVVM</div>
@@ -466,11 +492,11 @@
           management, and structured playback workflows for elderly patient studies. A Firestore data model with
           hierarchical session and segment records synchronizes playback events with EmotiBit physiological data for
           downstream Python analysis. Media3-based playback handles emotion capture and progress tracking.</p>
-          <a class="proj-link" href="https://github.com/zinels" target="_blank" rel="noopener">View on GitHub</a>
+          <span class="project-status">Project overview</span>
         </div>
       </div>
 
-      <div class="proj-row reveal">
+      <div class="proj-row reveal" data-category="research mobile">
         <div>
           <h3>Driving Behavior Research App</h3>
           <div class="proj-stack">Unity · C# · Android · GPS APIs</div>
@@ -483,7 +509,7 @@
         </div>
       </div>
 
-      <div class="proj-row reveal">
+      <div class="proj-row reveal" data-category="systems">
         <div>
           <h3>ResearchLink</h3>
           <div class="proj-stack">Next.js · FastAPI · SQLAlchemy · SQLite</div>
@@ -495,7 +521,7 @@
         </div>
       </div>
 
-      <div class="other-projects">
+      <details class="project-archive"><summary>More experiments &amp; earlier projects <span>08 projects +</span></summary><div class="other-projects">
         <div class="other-row reveal">
           <h4>School Wellness Insights Dashboard</h4>
           <div>
@@ -552,7 +578,7 @@
             <span class="proj-stack">Arduino · C++ · Ultrasonic Sensor</span>
           </div>
         </div>
-      </div>
+      </div></details>
     </div>
   </section>
 
@@ -647,7 +673,7 @@
 
       <div class="skill-row reveal">
         <h4>Languages</h4>
-        <p>Python, Java, Kotlin, C#, JavaScript, TypeScript, SQL, C/C++, Bash</p>
+        <p>Python, Java, Kotlin, C#, JavaScript, TypeScript, SQL, C/C++, COBOL, Bash</p>
       </div>
       <div class="skill-row reveal">
         <h4>Frameworks</h4>
@@ -659,7 +685,7 @@
       </div>
       <div class="skill-row reveal">
         <h4>Tools</h4>
-        <p>Git, GitHub Actions, Jira, ServiceNow, Tableau, Unity, Android SDK, Vercel</p>
+        <p>Git, GitHub Actions, Jira, ServiceNow, Tableau, Unity, OpenXR, Android SDK, Vercel</p>
       </div>
       <div class="skill-row reveal">
         <h4>Practices</h4>
@@ -716,46 +742,6 @@
 
 <button class="back-to-top" id="toTop" aria-label="Back to top">↑</button>
 
-<script>
-  const burger = document.getElementById('burgerBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  burger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    burger.setAttribute('aria-expanded', open);
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-  }));
-
-  const sections = ['experience','projects','education','leadership','skills','contact'].map(id => document.getElementById(id));
-  const navLinks = document.querySelectorAll('#deskNav a');
-  const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        const match = document.querySelector('#deskNav a[href="#' + entry.target.id + '"]');
-        if (match) match.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-  sections.forEach(s => s && navObserver.observe(s));
-
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
-  document.querySelectorAll('.reveal, .role, .proj-row, .other-row, .lead-row, .skill-row').forEach(el => revealObserver.observe(el));
-
-  const toTop = document.getElementById('toTop');
-  window.addEventListener('scroll', () => {
-    toTop.classList.toggle('show', window.scrollY > 500);
-  });
-  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-</script>
+<script src="portfolio.js" defer></script>
 </body>
 </html>
